@@ -6,7 +6,8 @@ using std::string;
 using std::cin;
 using std::cout;
 
-string formatter(string src, string words);
+string formatter(string, string);
+string welcome(string);
 string greetings[] = {
   "野生的 u 出現。",
   "歡迎 u。打聲招呼吧！",
@@ -27,14 +28,11 @@ string greetings[] = {
 };
 
 int main() {
+  srand(time(NULL));
   string username = "undefined";
   cout << "使用者名稱:";
   cin >> username;
-
-  srand(time(NULL));
-  int arraySize = sizeof(greetings) / sizeof(string);
-  int randomIndex = rand() % arraySize;
-  cout << "\n" << formatter(greetings[randomIndex], username);
+  cout << welcome(username);
 }
 
 string formatter(string src, string words) {
@@ -46,6 +44,11 @@ string formatter(string src, string words) {
       i += wordsLength;
     }
   }
-
   return src;
+}
+
+string welcome(string username) {
+  int arraySize = sizeof(greetings) / sizeof(string);
+  int randomIndex = rand() % arraySize;
+  return formatter(greetings[randomIndex], username);
 }
