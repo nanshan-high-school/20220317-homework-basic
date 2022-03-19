@@ -11,7 +11,7 @@ int main() {
 }
 
 string welcome (string name) {
-  string arr[3][2] = {{"你好，","，我們希望你帶個披薩來"},{"","已加入隊伍"},{"野生的","出現了"}};
+  string arr[3][2] = {{"歡迎，","，我們希望你帶個披薩來"},{"","跳進了伺服器。"},{"很高興見到您，",""}};
   srand(time(NULL));
   int random;
   random = rand() % 3;
