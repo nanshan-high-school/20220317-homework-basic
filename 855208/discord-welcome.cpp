@@ -50,5 +50,7 @@ string formatter(string src, string words) {
 string welcome(string username) {
   int arraySize = sizeof(greetings) / sizeof(string);
   int randomIndex = rand() % arraySize;
-  return formatter(greetings[randomIndex], username);
+  string prefix = "";
+  string suffix = "";
+  return prefix + formatter(greetings[randomIndex], username) + suffix;
 }
