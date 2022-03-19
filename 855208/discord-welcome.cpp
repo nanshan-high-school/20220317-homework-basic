@@ -29,7 +29,7 @@ string greetings[] = {
 int main() {
   string username = "undefined";
   cout << "使用者名稱:";
-  //cin >> username;
+  cin >> username;
 
   srand(time(NULL));
   int arraySize = sizeof(greetings) / sizeof(string);
